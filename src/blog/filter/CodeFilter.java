@@ -1,6 +1,7 @@
 package blog.filter;
 
 import java.io.IOException;
+
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -32,7 +33,6 @@ public class CodeFilter implements Filter {
 		HttpServletResponse rp = (HttpServletResponse) response;
 		rq.setCharacterEncoding("utf-8");
 		rp.setCharacterEncoding("utf-8");
-		rp.setContentType("text/html;charset=utf-8");
 
 		rp.setHeader("Cache-Control", "no-cache");
 		rp.setHeader("Pragma", "no-cache");
