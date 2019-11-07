@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+.container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  flex-direction: column;
+}

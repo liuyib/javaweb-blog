@@ -1,0 +1,128 @@
+.header {
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.header__inner {
+  width: 100%;
+  font-size: 18px;
+  height: 80vh;
+}
+
+.header-nav {
+  position: fixed;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(45, 46, 48, 0.7);
+  transition-property: transform, background-color;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+  will-change: transform;
+}
+
+.header-nav__inner {
+  position: relative;
+  margin: 0 auto;
+  width: calc(100% - 40px);
+  height: 100%;
+}
+
+.header-menu {
+  height: 100%;
+  line-height: 50px;
+}
+
+.header-menu-item {
+  float: left;
+  position: relative;
+  margin: 0 1rem 0 0;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.header-menu-item__link {
+  display: block;
+  padding: 0 0.5rem;
+  color: #f4f5f5;
+  transition-property: color;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+.header-info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(45, 46, 48, 0.7);
+}
+
+.header-info::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-info__inner {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1000;
+  padding: 0 0.5rem;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.header-info-title {
+  margin-bottom: 0.5rem;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.6em;
+  color: #f4f5f5;
+}
+
+.header-info-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #f4f5f5;
+}
+
+.header-scrolldown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 1002;
+  transform: translate3d(-50%, -0.5rem, 0);
+  cursor: pointer;
+  animation: arrowUpDown 1.5s infinite;
+}
+
+@keyframes arrowUpDown {
+  0%,
+  100% {
+    opacity: 0.8;
+    transform: translate3d(-50%, -0.5rem, 0);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate3d(-50%, -1.5rem, 0);
+  }
+}
+
+.header-scrolldown__icon {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+}

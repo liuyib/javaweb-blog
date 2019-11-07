@@ -1,0 +1,48 @@
+/* clear float */
+.clearfix::before,
+.clearfix::after {
+  content: ' ';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* Popover UI */
+[data-popover] {
+  position: relative;
+}
+
+[data-popover]::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1001;
+  font-family: sans-serif, Arial;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  white-space: nowrap;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  text-shadow: none;
+  transition-property: opacity, transform;
+  transform: translate(-50%, -70%);
+  pointer-events: none;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+[data-popover]::before {
+  content: attr(data-popover);
+  border-radius: 4px;
+  padding: 0.2rem 0.6rem;
+}
+
+[data-popover-pos='up']:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -120%);
+}

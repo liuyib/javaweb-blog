@@ -2,26 +2,22 @@ body {
 	background: #eee;
 }
 
-.container {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 340px;
-	height: 400px;
-	margin-left: -170px;
-	margin-top: -200px;
+.root {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	width: 100%;
 	text-align: center;
+	font-size: 30px;
+	font-weight: 600;
 }
 
-#input, #inputpassword {
-	margin: 10px 0;
+.container {
+	flex: 1 0 auto;
 }
 
-#submit {
-	margin-top: 10px;
-}
-
-.visitor {
-	display: inline-block;
-	margin-top: 20px;
+.footer {
+	flex: 0 0 auto;
 }
