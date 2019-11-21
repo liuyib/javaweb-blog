@@ -106,6 +106,11 @@ prefix="c"%>
               <section class="post-list">
                 <c:forEach var="article" items="${article_list}">
                   <article class="post">
+                    <span class="post-archives">
+                      <a class="post-archives__link" href="/Blog/SortServlet?get=${article.sort}">
+                        ${article.sort}
+                      </a>
+                    </span>
                     <header class="post-header">
                       <h1 class="post-header-title">
                         <a
@@ -116,14 +121,15 @@ prefix="c"%>
                         </a>
                       </h1>
                       <div class="post-header-meta">
-                        <span>发布时间：${article.time}</span>
-                        <span>
-                          文章分类：
-                          <a href="/Blog/SortServlet?get=${article.sort}">
-                            ${article.sort}
-                          </a>
+                        <span class="post-header-meta__item published">
+                          <i class="fa fa-calendar"></i>
+                          <span>发表于 ${article.time}</span>
                         </span>
-                        <span>阅读次数: ${article.visit}</span>
+                        <span style="margin: 0 5px;">•</span>
+                        <span class="post-header-meta__item visitor">
+                          <i class="fa fa-eye"></i>
+                          <span>被 ${article.visit} 人看爆</span>
+                        </span>
                       </div>
                     </header>
 
@@ -134,7 +140,7 @@ prefix="c"%>
                           class="post-body-more__a"
                           href="/Blog/ArticleServlet?id=${article.id}"
                         >
-                          阅读全文
+                          阅读全文 »
                         </a>
                       </div>
                     </div>
@@ -224,23 +230,23 @@ prefix="c"%>
                 </span>
               </div>
               <div class="sidebar-state">
-                <a class="sidebar-state__a posts" href="/archives/">
-                  <div class="sidebar-state__a--count">${article_number}</div>
-                  <div class="sidebar-state__a--name">
-                    <a href="#">归档</a>
-                  </div>
+                <a class="sidebar-state__a posts" href="#">
+                  <span class="sidebar-state__a--name">归档</span>
+                  <span class="sidebar-state__a--count">${article_number}</span>
                 </a>
-                <a class="sidebar-state__a categories" href="/categories/">
-                  <div class="sidebar-state__a--count">${sort_number}</div>
-                  <div class="sidebar-state__a--name">
-                    <a href="/Blog/SortServlet?get=all">分类</a>
-                  </div>
+                <a
+                  class="sidebar-state__a categories"
+                  href="/Blog/SortServlet?get=all"
+                >
+                  <span class="sidebar-state__a--name">分类</span>
+                  <span class="sidebar-state__a--count">${sort_number}</span>
                 </a>
-                <a class="sidebar-state__a tags" href="/tags/">
-                  <div class="sidebar-state__a--count">${tags_number}</div>
-                  <div class="sidebar-state__a--name">
-                    <a href="/Blog/TagsServlet?get=all">标签</a>
-                  </div>
+                <a
+                  class="sidebar-state__a tags"
+                  href="/Blog/TagsServlet?get=all"
+                >
+                  <span class="sidebar-state__a--name">标签</span>
+                  <span class="sidebar-state__a--count">${tags_number}</span>
                 </a>
               </div>
               <div class="sidebar-cc">
