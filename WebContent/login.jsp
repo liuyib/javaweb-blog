@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>登录 | MyBlog</title>
     <!-- Bootstrap core CSS -->
     <link
@@ -11,31 +11,30 @@
       rel="stylesheet"
     />
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/Blog/css/public.css" />
+    <link rel="stylesheet" href="/Blog/css/scaffolding/reset.css" />
     <link rel="stylesheet" href="/Blog/css/login.css" />
   </head>
   <body>
     <div id="root" class="root">
       <div class="header">MyBlog</div>
       <div class="main">
-        <form action="/Blog/LoginServlet" method="post">
-
-          <label for="input" class="sr-only">username</label>
+        <form class="form" action="/Blog/LoginServlet" method="post">
+          <label for="input" class="sr-only">用户名</label>
           <input
             type="text"
             id="input"
-            class="form-control"
-            placeholder="username"
+            class="form-control form__input"
+            placeholder="请输入用户名"
             name="username"
             required
           />
-          <label for="inputPassword" class="sr-only">password</label>
+          <label for="inputPassword" class="sr-only">密码</label>
 
           <input
             type="password"
             id="inputPassword"
-            class="form-control"
-            placeholder="password"
+            class="form-control form__input"
+            placeholder="请输入密码"
             name="password"
             required
           />
@@ -45,23 +44,19 @@
             class="btn btn-lg btn-primary btn-block"
             type="submit"
           >
-            login
+            登录
           </button>
-
-          <a class="visitor" href="/Blog/index.jsp">visitor</a>
         </form>
-      </div>
 
-      <div class="footer">
-        <a target="_blank" href="https://github.com/Lemonreds">
-          <img
-            src="/Blog/img/github.png"
-            width="22px"
-            height="22px"
-            class="img-circle"
-          />GitHub
-        </a>
-        by lemonreds.
+        <div class="login-other">
+          <span>
+            <span>其他登录方式：</span>
+            <a class="visitor" href="/Blog/index.jsp">游客</a>
+          </span>
+          <span class="register">
+            <a href="/Blog/register.jsp">注册账户</a>
+          </span>
+        </div>
       </div>
     </div>
   </body>
