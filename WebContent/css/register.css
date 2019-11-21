@@ -1,0 +1,41 @@
+body {
+  background: #eee;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+  padding: 20px 0;
+}
+
+.main {
+  flex: 1 0 auto;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.form__input {
+  margin-bottom: 20px;
+}
+
+.login-other {
+  overflow: hidden;
+}
+
+.login {
+  float: right;
+}

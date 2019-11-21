@@ -1,23 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
- <%@taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
-		
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>管理 | MyBlog</title>
-
-
 <!-- Bootstrap core CSS -->
 <link	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<!-- Custom styles for this template -->
-<link href="signin.css" rel="stylesheet">
-
-<link type="text/css" rel="stylesheet" href="./css/public.css" />
-<link type="text/css" rel="stylesheet" href="./css/admin.css" />
-
-<script src="./js/admin.js"></script>
-
+<link type="text/css" rel="stylesheet" href="../css/scaffolding/reset.css" />
+<link type="text/css" rel="stylesheet" href="../css/admin.css" />
 </head>
 <body>
 	<div class="head_line"></div>
@@ -30,7 +21,7 @@
 				</div>		
 		</div>
 				 
-				 <div class="admin_div">
+			<div class="admin_div">
 				<h4 class="btn btn-default">统计</h4>
 				<h5> 被访问了 ${visited } 次</h5>
 				<h5> 一共有 ${member}个访问者</h5>    
@@ -81,24 +72,13 @@
 				</div>							
 				</c:forEach>
 				
-				</div>
-			
-				
-				
-
-
-
+			</div>
 		<div class="foot_line"></div>		
 		</div><!-- container -->		
-		
-		
-		
-		
-		
-		
 	<div id="footer">		
 		<a href="#">&nbsp;&nbsp;MyBlog</a>	
-	</div> 		
-	
+	</div>
+
+	<script src="../js/admin.js"></script>
 </body>
 </html>
