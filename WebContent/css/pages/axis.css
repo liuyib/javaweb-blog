@@ -1,2 +1,108 @@
 @charset "UTF-8";
-@import "../comm
+
+@import "../common.css";
+
+.archive {
+    margin-left: 1rem;
+}
+
+.archive-total {
+    position: relative;
+    padding: 0 0 1.5rem 1.5rem;
+    font-size: calc(1em + 2px);
+}
+
+.archive-total::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    left: 0;
+    z-index: 1000;
+    border: .2rem solid #6ec5ff;
+    border-radius: 50%;
+    width: .9rem;
+    height: .9rem;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+}
+
+.archive-total::after {
+    content: '';
+    position: absolute;
+    top: 1em;
+    bottom: 0;
+    left: 0;
+    border-left: .3rem dashed #c8edff;
+    transform: translateX(-50%);
+}
+
+.post-timeline {
+	position: relative;
+}
+
+.post-timeline::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    border-left: .3rem solid #c8edff;
+    transform: translateX(-50%);
+}
+
+.post-timeline-item {
+	display: block;
+	position: relative;
+	margin-bottom: .8rem;
+	padding-left: 1.5rem;
+	width: 100%;
+	align-items: center;
+}
+
+.post-timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1000;
+    border: .15rem solid #6ec5ff;
+    border-radius: 50%;
+    width: .6rem;
+    height: .6rem;
+    background-color: #fff;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: border-color;
+    transform: translate(-50%,-50%);
+}
+
+.post-timeline-item.year {
+	font-weight: 700;
+}
+
+.post-timeline-item__time {
+	display: inline-block;
+	margin-right: 1em;
+	width: 3em;
+	vertical-align: middle;
+	color: #99a9bf;
+	transform: translateY(3%);
+}
+
+.post-timeline-item-title {
+	display: inline-block;
+	margin: 0;
+	width: calc(100% - 6em);
+	font-size: 1em;
+	font-weight: 400;
+	vertical-align: middle;
+}
+
+.post-timeline-item-title__link {
+	color: #333;
+	transition-delay: 0s;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: color;
+}

@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>时间轴 | MyBlog</title>
-<link rel="stylesheet" href="/Blog/css/pages/sort.css" type="text/css" />
+<link rel="stylesheet" href="/Blog/css/pages/axis.css" type="text/css" />
 </head>
 <body>
 	<div id="container" class="container">
@@ -17,23 +17,26 @@
 		<div class="main__inner">
 			<div class="content-wrap">
 				<div class="content">
-					<c:forEach var="axis" varStatus="status" items="${axis_list}">
-						<c:choose>
-							<c:when test="${axis.id==0}">
-								<div class="longline_div">
-									<div>${axis.year}</div>
-								</div>
-							</c:when>
-							<c:otherwise>
-								<div class="line_div">
-									<div>
-										<a href="/Blog/ArticleServlet?id=${axis.id}">&nbsp;&nbsp;${axis.month}-${axis.day}
-											&nbsp;&nbsp;&nbsp;&nbsp;${axis.title} </a>
-									</div>
-								</div>
-							</c:otherwise>
-						</c:choose>
-					</c:forEach>
+					<div class="archive">
+						<div class="archive-total">目前共 ${axis_list.size() - 1} 篇文章，继续加油！</div>
+						<section class="post-timeline">
+							<c:forEach var="axis" varStatus="status" items="${axis_list}">
+								<c:choose>
+									<c:when test="${axis.id==0}">
+										<time class="post-timeline-item year">${axis.year}</time>
+									</c:when>
+									<c:otherwise>
+										<article class="post-timeline-item">
+											<time class="post-timeline-item__time">${axis.month}-${axis.day}</time>
+											<h2 class="post-timeline-item-title">
+												<a class="post-timeline-item-title__link" href="/Blog/ArticleServlet?id=${axis.id}">${axis.title}</a>
+											</h2>
+										</article>
+									</c:otherwise>
+								</c:choose>
+							</c:forEach>
+						</section>
+					</div>
 				</div>
 			</div>
 
