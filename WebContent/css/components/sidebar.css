@@ -1,0 +1,156 @@
+.sidebar {
+  width: 280px;
+  float: right;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+.sidebar__inner {
+  border-radius: 5px;
+  padding: 1rem;
+  width: 280px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.sidebar-author {
+  width: 100%;
+  text-align: center;
+}
+
+.sidebar-author-avatar {
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+
+.sidebar-author-avatar__img {
+  display: block;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  opacity: 1;
+}
+
+.sidebar-author__motto {
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.sidebar-social,
+.sidebar-feed,
+.sidebar-state,
+.sidebar-cc {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.sidebar-social__item {
+  display: inline-block;
+  margin: 0.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: #a0daff;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition-property: background-color;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+.sidebar-social__item:hover {
+  color: #fff;
+  background-color: #4dbaff;
+}
+
+.sidebar-social__item--icon {
+  font-size: 1.2em;
+}
+
+.sidebar-feed {
+  font-size: 0;
+}
+
+.sidebar-feed-email,
+.sidebar-feed-rss {
+  display: inline-block;
+  width: 50%;
+  font-size: 14px;
+}
+
+.sidebar-feed-email_a,
+.sidebar-feed-rss__a {
+  transition-property: color;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+.sidebar-feed-email_a {
+  color: #54bcff;
+}
+
+.sidebar-feed-email_a:hover {
+  color: #10a1ff;
+}
+
+.sidebar-feed-rss__a {
+  color: #ff8956;
+}
+
+.sidebar-feed-rss__a:hover {
+  color: #ff5912;
+}
+
+.sidebar-feed-email__a--icon,
+.sidebar-feed-rss__a--icon {
+  margin-right: 0.2rem;
+}
+
+.sidebar-state__a {
+  display: inline-block;
+  width: 30%;
+  line-height: 1.5em;
+  transition-property: color;
+  transition-delay: 0s;
+  transition-timing-function: ease;
+  transition-duration: 0.2s;
+}
+
+.sidebar-state__a:not(:last-child) {
+  border-right: 1px solid #e1e1e1;
+}
+
+.sidebar-state__a--count {
+  font-weight: 600;
+  color: #333;
+}
+.sidebar-state__a.posts {
+  color: #54bcff;
+}
+
+.sidebar-state__a.posts:hover {
+  color: #0377c5;
+}
+
+.sidebar-state__a.categories {
+  color: #5c5c5c;
+}
+
+.sidebar-state__a.categories:hover {
+  color: #3d3d3d;
+}
+
+.sidebar-state__a.tags {
+  color: #ff8956;
+}
+
+.sidebar-state__a.tags:hover {
+  color: #d67348;
+}

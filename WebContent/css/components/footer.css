@@ -1,0 +1,22 @@
+.footer {
+  flex: 0 0 auto;
+}
+
+.footer__inner {
+  position: relative;
+  padding: 1rem;
+  font-size: 16px;
+  text-align: center;
+  color: #eee;
+  background-color: rgba(45, 46, 48, 0.7);
+}
+
+.footer__inner .logo {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+}
+
+.footer__inner .v-middle {
+  vertical-align: middle;
+}

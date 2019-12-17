@@ -1,0 +1,13 @@
+@charset "UTF-8";
+@import "../common.css";
+
+.sort_name {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.visit {
+  color: gray;
+}
