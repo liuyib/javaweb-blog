@@ -1,0 +1,26 @@
+.paginator {
+    margin-top: 1.5em;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.paginator-prev {
+    text-align: left;
+}
+
+.paginator-next {
+    text-align: right;
+}
+
+.paginator-prev__link,
+.paginator-next__link {
+    color: #49b1f5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    transition-property: color;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+}

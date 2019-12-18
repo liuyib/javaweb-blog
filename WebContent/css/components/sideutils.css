@@ -1,0 +1,48 @@
+.sideutils {
+	float: left;
+	margin-right: 2rem;
+	width: 3rem;
+}
+
+.sideutils-btn {
+    position: relative;
+    margin-bottom: 1rem;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.04);
+    cursor: pointer;
+}
+
+.sideutils-btn::after {
+    content: attr(badge);
+    position: absolute;
+    top: 0;
+    left: 75%;
+    padding: 0.1rem .3rem;
+    font-size: 0.5rem;
+    text-align: center;
+    line-height: 1;
+    white-space: nowrap;
+    color: #fff;
+    background-color: #b2bac2;
+    border-radius: .7rem;
+    transform-origin: left top;
+}
+
+.sideutils-btn__adjust {
+	color: #b2b2b2;
+}
+
+.sideutils-btn__comment {
+	color: #b2b2b2;
+}
+
+.sideutils-btn__comment a {
+	color: inherit;
+}

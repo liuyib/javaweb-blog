@@ -26,21 +26,8 @@
 										class="fa fa-folder-open-o"></i> ${article.sort}
 								</a>
 								</span>
-								<header class="post-header">
-									<h1 class="post-header-title">
-										<a class="post-header-title__a"
-											href="/Blog/ArticleServlet?id=${article.id}">
-											${article.title} </a>
-									</h1>
-									<div class="post-header-meta">
-										<span class="post-header-meta__item published"> <i
-											class="fa fa-calendar"></i> 发表于 ${article.time}
-										</span> <span style="margin: 0 5px;">•</span> <span
-											class="post-header-meta__item visitor"> <i
-											class="fa fa-eye"></i> 被 ${article.visit} 人看爆
-										</span>
-									</div>
-								</header>
+
+								<%@ include file="./components/post-header.jsp"%>
 
 								<div class="post-body">
 									<div class="post-body-excerpt">${article.content}</div>

@@ -35,3 +35,7 @@ a {
 a:hover {
   color: #11a3eb;
 }
+
+img {
+	max-width: 100%;
+}

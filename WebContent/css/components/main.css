@@ -19,9 +19,9 @@
 	font-size: 16px;
 }
 
-@media ( min-width : 1341.98px) {
+@media ( min-width : 1140.98px) {
 	.main__inner {
-		width: 1301.98px;
+		width: 1100.98px;
 	}
 }
 
@@ -39,8 +39,12 @@
 
 .content-wrap {
 	position: relative;
-	width: calc(100% - 310px);
+	width: calc(100% - 300px);
 	float: left;
+}
+
+.content-wrap-post {
+	width: calc(100% - 400px);
 }
 
 @media ( max-width : 991.98px) {

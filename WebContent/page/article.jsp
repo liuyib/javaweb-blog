@@ -7,10 +7,21 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>${article.title}|MyBlog</title>
-<link rel="stylesheet" href="/Blog/css/pages/article.css"
-	type="text/css" />
+<title>${article.title} | MyBlog</title>
+<link rel="stylesheet" href="/Blog/css/pages/article.css" type="text/css" />
 <script src="./js/article.js"></script>
+
+<script src="./editormd/js/zepto.min.js"></script>
+<script src="./editormd/js/editormd.js"></script>
+<script src="./editormd/js/jquery.min.js"></script>
+<script src="./editormd/lib/marked.min.js"></script>
+<script src="./editormd/lib/prettify.min.js"></script>
+<script src="./editormd/lib/raphael.min.js"></script>
+<script src="./editormd/lib/underscore.min.js"></script>
+<script src="./editormd/lib/sequence-diagram.min.js"></script>
+<script src="./editormd/lib/flowchart.min.js"></script>
+<script src="./editormd/lib/jquery.flowchart.min.js"></script>
+<script src="./editormd/editormd.js"></script>
 </head>
 
 <body>
@@ -19,95 +30,28 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap">
+			<%@ include file="./components/sideutils.jsp"%>
+
+			<div class="content-wrap content-wrap-post">
 				<div class="content">
-					<div id="a_content">
-						<jsp:include page="/page/show.jsp" />
+					<%@ include file="./components/post-header.jsp"%>
+
+					<div id="postContent" class="post-content">
+						<textarea id="article_content">${article.content}</textarea>
 					</div>
 
-					<div id="article">
-						<div id="a_head ">
-							<h3>${article.title}</h3>
-							<div>
-								<h5>
-									<span>${article.time}</span> <a
-										href="/Blog/SortServlet?get=${article.sort}">${article.sort}</a>
-									<span>${article.author}</span>
-								</h5>
-							</div>
-							<div class="r_div">
-								<h5>
-									<span>${article.visit}</span> <span>${article.star}</span> <span>${article.comment}</span>
-								</h5>
-							</div>
-							<div id="tag">
-								<c:forEach var="t" items="${article_tags}">
-									<a href="/Blog/TagsServlet?get=${t.tag}">${t.tag}</a>
-								</c:forEach>
-							</div>
-						</div>
+					<div class="post-tag">
+						<div class="post-tag-info">关注下面这些标签，发现更多相似文章~</div>
+						<c:forEach var="t" items="${article_tags}">
+							<i class="post-tag__icon fa fa-tags"></i>
+							<a class="post-tag-item" href="/Blog/TagsServlet?get=${t.tag}">${t.tag}</a>
+						</c:forEach>
 					</div>
 
-					<div>
-						<div class="f_div">
-							<span></span>
-							<c:choose>
-								<c:when test="${article_pre!=null}">
-									<a href="/Blog/ArticleServlet?id=${article_pre.id}">上一篇:${article_pre.title}</a>
-								</c:when>
-								<c:otherwise>没有更早的文章了</c:otherwise>
-							</c:choose>
-						</div>
-						<div class="r_div">
-							<c:choose>
-								<c:when test="${article_next!=null}">
-									<a href="/Blog/ArticleServlet?id=${article_next.id}">下一篇:${article_next.title}</a>
-								</c:when>
-								<c:otherwise>没有更多的文章了</c:otherwise>
-							</c:choose>
-							<span class="glyphicon glyphicon-chevron-right"></span>
-						</div>
-
-						<div>
-							<span onclick="love_article(${article.id})">点赞</span>
-						</div>
-					</div>
-
-					<div class="comment">
-						<div class="r_div">
-							<a href="#comment"><span>写评论....</span></a>
-						</div>
-
-						<c:if test="${comment!=null}">
-							<c:forEach var="comm" varStatus="status" items="${comment}">
-								<div class="row">
-									<div class="f_div">
-										<img src="/Blog/img/comment.jpg" height="50" width="50" /> <span>
-											${comm.nickname}</span> <span>${comm.time}</span>
-									</div>
-									<div id="c_content" class="c_left">
-										<pre>${comm.content }</pre>
-									</div>
-									<div class="r_div">
-										<a> <span onclick="star(this,${comm.id})">${comm.star}</span>
-										</a> <a> <span onclick="diss(this,${comm.id})">${comm.diss}</span>
-										</a>
-										<c:if test="${sessionScope.user!=null}">
-											<span onclick="deletecm(this,${comm.id})">删除</span>
-										</c:if>
-									</div>
-								</div>
-							</c:forEach>
-						</c:if>
-
-						<form action="/Blog/NewCommentServlet?id=${article.id}"
-							method="post">
-							<input type="text" name="w_nickname" value="热心网友"> <br />
-							<textarea name="w_content"></textarea>
-							<input type="submit" value="评论" onclick="onclick" /> <br />
-						</form>
-					</div>
+					<%@ include file="./components/post-paginator.jsp"%>
 				</div>
+
+				<%@ include file="./components/comment.jsp"%>
 			</div>
 
 			<%@ include file="./components/sidebar.jsp"%>
@@ -118,5 +62,18 @@
 
 		<%@ include file="./components/footer.jsp"%>
 	</div>
+	
+	<script type="text/javascript">
+		$(function mdToHtml() {
+			editormd.markdownToHTML("postContent", {
+				htmlDecode : "style,script,iframe",
+				emoji : true,
+				taskList : true,
+				tex : true, // 默认不解析
+				flowChart : true, // 默认不解析
+				sequenceDiagram : true, // 默认不解析			
+			});
+		});
+	</script>
 </body>
 </html>

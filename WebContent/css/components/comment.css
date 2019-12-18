@@ -1,0 +1,132 @@
+.comment {
+	margin-top: 1rem;
+	border-radius: 5px;
+	padding: 1rem 2rem;
+	width: 100%;
+	background-color: #fff;
+}
+
+.comment-input {
+	position: relative;
+	overflow: hidden;
+	margin: 1rem 0;
+	font-size: 0;
+}
+
+.comment-input-avatar {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+}
+
+.comment-input-avatar img {
+	width: 100%;
+	height: 100%;
+}
+
+.comment-input-area {
+	margin-left: 3rem;
+    border: 1px solid #c7c2c2;
+    border-radius: 3px;
+	width: calc(100% - 3rem);
+    min-height: 1.3em;
+    line-height: 1.7;
+    font-size: 0;
+    background-color: #fff;
+    color: #e4e4e4;
+    outline: none;
+}
+
+.comment-input-area textarea {
+	border: 0;
+	border-radius: 5px;
+	outline: 0;
+	width: 100%;
+	max-width: 100%;
+	height: 2rem;
+	min-height: 2rem;
+    font-size: 1rem;
+}
+
+.comment-input-submit {
+	float: right;
+	margin-top: .5rem;
+    padding: .25rem .5rem;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    background-color: #57aaff;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color .3s,color .3s;
+}
+
+.comment-item {
+	border-bottom: 1px solid #e9e9e9;
+	margin-bottom: .5rem;
+	padding-bottom: .5rem;
+}
+
+.comment-meta {
+    position: relative;
+    margin-bottom: .2rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.comment-meta-avatar {
+	margin-right: .25rem;
+}
+
+.comment-meta-avatar img {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.comment-meta-name {
+	font-weight: 500;
+	color: #000;
+}
+
+.comment-meta-date {
+    float: right;
+    font-size: 14px;
+    color: #8590a6;
+}
+
+.comment-content {
+	padding-left: 1.5rem;
+	text-align: left;
+}
+
+.comment-content__text {
+	margin-bottom: .25rem;
+}
+
+.comment-content-option {
+	text-align: right;
+}
+
+.comment-adjust,
+.comment-diss {
+	margin-right: 1rem;
+	cursor: pointer;
+}
+
+.comment-adjust i,
+.comment-diss i {
+	font-size: 18px;
+}
+
+.comment-adjust {
+	color: #8590a6;
+}
+
+.comment-diss {
+	color: #8590a6;
+}

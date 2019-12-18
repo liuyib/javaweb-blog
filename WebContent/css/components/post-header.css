@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import "../common.css";
+
+.post-header {
+	position: relative;
+	margin-bottom: 2.5rem;
+	font-size: 1em;
+	text-align: center;
+}
+
+.post-header-meta__item.published {
+	color: #00a7e0;
+}
+
+.post-header-meta__item.visitor {
+	color: #ff3f1a;
+}
+
+.post-header-meta__item.sort {
+	color: #00a7e0;
+}
+
+.post-header-meta__item.author {
+	color: #777;
+}
+
+.post-header-title {
+	position: relative;
+	margin: 0;
+	color: #444;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	font-size: 26px;
+	font-weight: bolder;
+	transition: color 0.3s;
+	cursor: auto;
+}

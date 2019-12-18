@@ -1,2 +1,29 @@
 @charset "UTF-8";
 @import "../common.css";
+
+.post-header {
+	margin-bottom: 1.5rem
+}
+
+.post-content {
+	margin-bottom: 2rem;
+}
+
+.post-tag {
+	text-align: left;
+}
+
+.post-tag__icon {
+	color: #058ed2;
+}
+
+.post-tag-item {
+	margin-right: .5rem;
+	color: #058ed2;
+}
+
+.post-tag-info {
+	border-left: 5px solid #999;
+	padding-left: 1rem;
+	margin-bottom: .5rem;
+}
