@@ -1,13 +1,56 @@
 @charset "UTF-8";
 @import "../common.css";
 
-.sort_name {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  text-align: left;
-  margin-left: 20px;
+.category {
+	width: 100%;
 }
 
-.visit {
-  color: gray;
+.category-total {
+	font-size: calc(1em + 10px);
+    text-align: center;
+    cursor: default;
+}
+
+.category-item {
+	margin-bottom: 1rem;
+}
+
+.category-item__tag {
+	color: #11a3eb;	
+}
+
+.category-list {
+	position: relative;
+}
+
+.category-list-item {
+	display: block;
+	position: relative;
+	padding-left: 1.5rem;
+	width: 100%;
+	align-items: center;
+}
+
+.category-list-item::before {
+	content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1000;
+    border-radius: 50%;
+    width: .3rem;
+    height: .3rem;
+    background-color: #999;
+    transition-delay: 0s;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: border-color;
+    transform: translate(50%,-50%);
+}
+
+.category-list-item__link {
+	transition-delay: 0s;
+	transition-timing-function: ease;
+	transition-duration: .2s;
+	transition-property: color;
 }

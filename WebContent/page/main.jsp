@@ -16,7 +16,7 @@
 		<main id="main" class="main">
 		<div class="main__inner">
 			<div class="content-wrap">
-				<div class="content">
+				<div class="content content-home">
 					<section class="post-list">
 						<c:forEach var="article" items="${article_list}">
 							<article class="post">

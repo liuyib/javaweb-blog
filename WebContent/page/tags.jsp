@@ -2,8 +2,8 @@
 	pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>标签 | MyBlog</title>
@@ -17,33 +17,23 @@
 		<div class="main__inner">
 			<div class="content-wrap">
 				<div class="content">
-					<div class="list-group">
-
-						<a href="#" class="list-group-item active">标签</a>
+					<div class="tagcloud">
+						<div class="tagcloud-total">标签 - ${id_tag_map.size()}</div>
 						<c:forEach var="map" items="${id_tag_map}">
-							<div class="tags_name">
-								<span class="glyphicon glyphicon-triangle-bottom"></span>&nbsp;&nbsp;${map.key}
-							</div>
-							<div>
-								<!-- 标签信息 -->
-								<ul class="list-group">
-									<c:forEach var="list" items="${map.value}">
-										<li class="list-group-item">
-											<div>
-												<div>
-													<div>
-														<a href="./ArticleServlet?id=${list.id}">${list.title}</a>
-													</div>
-													<div class="c_right">
-														<img src="./img/time.png"> ${list.time}&nbsp;&nbsp;
-														<span class="visit"><img src="/Blog/img/visit.png">
-															${list.visit} </span>
-													</div>
-												</div>
-											</div>
-										</li>
-									</c:forEach>
-								</ul>
+							<div class="tagcloud-item">
+								<div class="tagcloud-item__name">
+									<i class="tag-list-item__tag fa fa-tags"></i>
+									${map.key}
+								</div>
+								<div class="tagcloud-item__list">
+									<ul class="tag-list">
+										<c:forEach var="list" items="${map.value}">
+											<li class="tag-list-item">
+												<a class="tag-list-item__link" href="./ArticleServlet?id=${list.id}">${list.title}</a>
+											</li>
+										</c:forEach>
+									</ul>
+								</div>
 							</div>
 						</c:forEach>
 					</div>

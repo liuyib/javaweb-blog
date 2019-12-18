@@ -19,33 +19,24 @@
 		<div class="main__inner">
 			<div class="content-wrap">
 				<div class="content">
-					<section class="post-list">
-						<div class="list-group">
-							<a href="#" class="list-group-item active">分类</a>
-
-							<c:forEach var="map" items="${sort_article_map}">
-								<div class="sort_name">${map.key}</div>
-								<div>
-									<ul class="list-group">
-										<c:forEach var="list" items="${map.value}">
-											<li class="list-group-item">
-												<div>
-													<div>
-														<a href="/Blog/ArticleServlet?id=${list.id}">${list.title}</a>
-													</div>
-													<div>
-														<span> <i class="fa fa-clock-o"></i> ${list.time}
-														</span> <span> <i class="fa fa-eye"></i> ${list.visit}
-														</span>
-													</div>
-												</div>
-											</li>
-										</c:forEach>
-									</ul>
+					<div class="category">
+						<div class="category-total">分类 - ${sort_article_map.size()}</div>
+						<c:forEach var="map" items="${sort_article_map}">
+							<div class="category-item">
+								<div class="category-item__name">
+									<i class="category-item__tag fa fa-folder-open"></i>
+									${map.key}
 								</div>
-							</c:forEach>
-						</div>
-					</section>
+								<ul class="category-list">
+									<c:forEach var="list" items="${map.value}">
+										<li class="category-list-item">
+											<a class="category-list-item__link" href="/Blog/ArticleServlet?id=${list.id}">${list.title}</a>
+										</li>
+									</c:forEach>
+								</ul>
+							</div>
+						</c:forEach>
+					</div>
 				</div>
 			</div>
 
