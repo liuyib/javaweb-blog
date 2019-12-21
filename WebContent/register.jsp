@@ -6,10 +6,7 @@ pageEncoding="UTF-8"%>
     <meta charset="UTF-8" />
     <title>注册 | MyBlog</title>
     <!-- Bootstrap core CSS -->
-    <link
-      href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="/Blog/css/scaffolding/reset.css" />
     <link rel="stylesheet" href="/Blog/css/register.css" />

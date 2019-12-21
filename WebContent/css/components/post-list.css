@@ -40,6 +40,11 @@
 
 .post-archives__link {
 	color: #fff;
+	transition: color .2s;
+}
+
+.post-archives__link:hover {
+	color: #f1f1f1;
 }
 
 .post-list .post-body-more {

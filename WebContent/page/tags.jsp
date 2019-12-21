@@ -22,7 +22,7 @@
 						<c:forEach var="map" items="${id_tag_map}">
 							<div class="tagcloud-item">
 								<div class="tagcloud-item__name">
-									<i class="tag-list-item__tag fa fa-tags"></i>
+									<i class="tagcloud-item__tag fa fa-tags"></i>
 									${map.key}
 								</div>
 								<div class="tagcloud-item__list">
@@ -32,6 +32,7 @@
 												<a class="tag-list-item__link" href="./ArticleServlet?id=${list.id}">${list.title}</a>
 											</li>
 										</c:forEach>
+										<div class="clearfix"></div>
 									</ul>
 								</div>
 							</div>

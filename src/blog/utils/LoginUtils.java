@@ -14,13 +14,16 @@ public class LoginUtils {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
-		if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password))
+		if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
 			return;
+		}
 
 		UserDao dao = UserDaoImpl.getInstance();
 		User user = dao.login(username, password);
-		if (user == null)
+
+		if (user == null) {
 			return;
+		}
 
 		// 写入session
 		HttpSession session = request.getSession();

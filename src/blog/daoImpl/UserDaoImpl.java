@@ -64,29 +64,35 @@ public class UserDaoImpl implements UserDao {
 
 		String sql = "select * from t_user where user_name=? and user_password=? ";
 		PreparedStatement ps = null;
+
 		try {
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
 			ResultSet rs = ps.executeQuery();
+
 			// bean导入
 			if (rs.next()) {
 				Map<String, String> map = new HashMap<String, String>();
+
 				user = new User();
 				map.put("user_name", rs.getString("user_name"));
 				map.put("user_password", rs.getString("user_name"));
 				map.put("user_id", rs.getString("user_id"));
+
 				try {
 					BeanUtils.populate(user, map);
 				} catch (Exception e) {
 					throw new RuntimeException();
 				}
 			}
+
 			DBUtils.Close(ps, rs);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+
 		return user;
 	}
 }

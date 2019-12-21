@@ -33,6 +33,7 @@
 											<a class="category-list-item__link" href="/Blog/ArticleServlet?id=${list.id}">${list.title}</a>
 										</li>
 									</c:forEach>
+									<div class="clearfix"></div>
 								</ul>
 							</div>
 						</c:forEach>
