@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import "../scaffolding/index.css";
+
 .header {
   position: relative;
   flex: 0 0 auto;
@@ -30,7 +33,14 @@
   height: 100%;
 }
 
+@media (min-width: 1199.98px) {
+  .header-nav__inner {
+    width: 1200px;
+  }
+}
+
 .header-menu {
+  display: inline-block;
   height: 100%;
   line-height: 50px;
 }
@@ -38,10 +48,13 @@
 .header-menu-item {
   float: left;
   position: relative;
-  margin: 0 1rem 0 0;
   height: 50px;
   text-align: center;
   cursor: pointer;
+}
+
+.header-menu-item:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .header-menu-item__link {
@@ -54,6 +67,22 @@
   transition-duration: 0.2s;
 }
 
+.header-writting,
+.header-user {
+  float: right;
+  line-height: 50px;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.header-writting {
+  color: #ca0c16;
+}
+
+.header-user {
+  color: #fff;
+}
+
 .header-info {
   position: relative;
   width: 100%;
@@ -62,7 +91,7 @@
 }
 
 .header-info::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 0;

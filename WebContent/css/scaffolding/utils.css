@@ -9,6 +9,14 @@
   clear: both;
 }
 
+.cleara {
+	color: inherit;
+}
+
+.cleara:hover {
+	color: inherit;
+}
+
 /* Popover UI */
 [data-popover] {
   position: relative;

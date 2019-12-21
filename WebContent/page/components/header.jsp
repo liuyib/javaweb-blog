@@ -37,16 +37,19 @@
 							</a>
 						</div>
 					</div>
-					
-					<div class="header-writting"></div>
-					
+
 					<div class="header-user">
 						<c:if test="${sessionScope.user != null}">
 							已登录
 						</c:if>
 						<c:if test="${sessionScope.user == null}">
-							未登录
+							<a class="cleara" href="/Blog/index.jsp">登录/注册</a>
 						</c:if>
+					</div>
+
+					<div class="header-writting">
+						<i class="fa fa-paint-brush"></i>
+						<a class="cleara" href="/Blog/NewArticleServlet">写博客</a>
 					</div>
 				</div>
 			</nav>
