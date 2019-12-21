@@ -11,7 +11,6 @@
     box-sizing: border-box;
     outline: none;
     margin: 0;
-    transition: .1s;
     font-weight: 500;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -63,7 +62,6 @@
 .el-input__prefix {
     height: 100%;
     text-align: center;
-    transition: all .3s;
 }
 
 .el-input__icon {
@@ -96,6 +94,5 @@
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 100%;
 }

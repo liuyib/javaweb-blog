@@ -12,12 +12,21 @@
 
 .header {
 	margin-top: 100px;
+    transform: translateY(-1.5rem);
+    animation: loginPageSlider 1s;
+    animation-fill-mode: forwards;
 }
 
 .header__title {
 	font-size: 2rem;
 	font-weight: bolder;
 	text-align: center;
+}
+
+.main {
+    transform: translateY(1.5rem);
+    animation: loginPageSlider 1s;
+    animation-fill-mode: forwards;
 }
 
 .form-item {

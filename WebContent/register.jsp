@@ -5,66 +5,59 @@ pageEncoding="UTF-8"%>
   <head>
     <meta charset="UTF-8" />
     <title>注册 | MyBlog</title>
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="/Blog/css/scaffolding/reset.css" />
-    <link rel="stylesheet" href="/Blog/css/register.css" />
+    <link rel="stylesheet" href="/Blog/css/pages/register.css" />
   </head>
   <body>
-    <div id="root" class="root">
-      <div class="header">MyBlog</div>
-      <div class="main">
-        <form class="form" action="/Blog/RegisterServlet" method="post">
-          <label for="input" class="sr-only">用户名</label>
-          <input
-            type="text"
-            id="input"
-            class="form-control form__input"
-            placeholder="请输入用户名"
-            name="username"
-            required
-          />
+  	<div id="container" class="container">
+		<div class="container__inner">
+			<div class="header">
+				<div class="header__title">Ant Blog</div>
+			</div>
+			<div class="main">
+       			<form class="form" action="/Blog/RegisterServlet" method="post">
+					<div class="form-item">
+						<div class="el-input el-input--prefix">
+							<div class="el-input__prefix">
+								<i class="el-input__icon fa fa-user"></i>
+							</div>
+							<input class="el-input__inner" type="text" placeholder="请输入用户名" name="username" required />
+						</div>
+					</div>
+					
+					<div class="form-item">
+						<div class="el-input el-input--prefix">
+							<div class="el-input__prefix">
+								<i class="el-input__icon fa fa-lock"></i>
+							</div>
+							<input class="el-input__inner" type="password" placeholder="请输入密码" name="password" required />
+						</div>
+					</div>
 
-          <label for="inputPassword" class="sr-only">密码</label>
-          <input
-            type="password"
-            id="inputPassword"
-            class="form-control form__input"
-            placeholder="请输入密码"
-            name="password"
-            required
-          />
+					<div class="form-item">
+						<div class="el-input el-input--prefix">
+							<div class="el-input__prefix">
+								<i class="el-input__icon fa fa-lock"></i>
+							</div>
+							<input class="el-input__inner" type="password" placeholder="请再次输入密码" name="password" required />
+						</div>
+					</div>
 
-          <label for="inputPasswordAgagin" class="sr-only">确认密码</label>
-          <input
-            type="password"
-            id="inputPasswordAgagin"
-            class="form-control form__input"
-            placeholder="请再次输入密码"
-            name="password"
-            required
-          />
+					<div class="form-item form-submit">
+						<button id="submit" class="el-button el-button--primary el-button--small" type="submit">注册</button>
+					</div>
+				</form>
 
-          <button
-            id="submit"
-            class="btn btn-lg btn-primary btn-block"
-            type="submit"
-          >
-            注册
-          </button>
-        </form>
-
-        <div class="login-other">
-          <span>
-            <span>其他登录方式：</span>
-            <a class="visitor" href="/Blog/index.jsp">游客</a>
-          </span>
-          <span class="login">
-            <a href="/Blog/login.jsp">已有账户？登录</a>
-          </span>
-        </div>
-      </div>
-    </div>
+				<div class="auth clearfix">
+					<span class="auth-other">
+						<span>其他登录方式：</span>
+						<a class="visitor" href="/Blog/index.jsp">游客</a>
+					</span>
+					<span class="auth-login">
+						<a href="/Blog/login.jsp">已有账户？登录</a>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
   </body>
 </html>
