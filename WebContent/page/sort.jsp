@@ -17,7 +17,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
 				<div class="content">
 					<div class="category">
 						<div class="category-total">分类 - ${sort_article_map.size()}</div>
@@ -41,7 +41,9 @@
 				</div>
 			</div>
 
-			<%@ include file="./components/sidebar.jsp"%>
+			<c:if test="${sessionScope.user != null}">
+				<%@ include file="./components/sidebar.jsp"%>
+			</c:if>
 
 			<div class="clearfix"></div>
 		</div>

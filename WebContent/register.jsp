@@ -50,7 +50,7 @@ pageEncoding="UTF-8"%>
 				<div class="auth clearfix">
 					<span class="auth-other">
 						<span>其他登录方式：</span>
-						<a class="visitor" href="/Blog/index.jsp">游客</a>
+						<a href="/Blog/index.jsp">游客</a>
 					</span>
 					<span class="auth-login">
 						<a href="/Blog/login.jsp">已有账户？登录</a>

@@ -15,7 +15,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
 				<div class="content content-home">
 					<section class="post-list">
 						<c:forEach var="article" items="${article_list}">
@@ -42,7 +42,9 @@
 				</div>
 			</div>
 
-			<%@ include file="./components/sidebar.jsp"%>
+			<c:if test="${sessionScope.user != null}">
+				<%@ include file="./components/sidebar.jsp"%>
+			</c:if>
 
 			<div class="clearfix"></div>
 		</div>
@@ -51,22 +53,6 @@
 		<%@ include file="./components/footer.jsp"%>
 
 		<div>
-			<div>
-				<div>
-					<!-- <div class="sort">
-              <div class="list-group">
-                <span class="list-group-item active">分类</span>
-                <c:forEach var="entity" items="${sort_count_map}">
-                  <a
-                    href="/Blog/SortServlet?get=${entity.key}"
-                    class="list-group-item"
-                  >
-                    ${entity.key}&nbsp;&nbsp;&nbsp;&nbsp; (${entity.value})
-                  </article>
-                </c:forEach>
-              </div>
-            </div>
-
             <div class="visit">
               <div class="list-group">
                 <span class="list-group-item active">阅读排行</span>
@@ -79,69 +65,16 @@
                   </a>
                 </c:forEach>
               </div>
-            </div> -->
-
-					<!-- <div id="tag">
-              <div class="list-group">
-                <span class="list-group-item active">标签</span> <br />
-
-                <c:forEach var="t" varStatus="status" items="${tag_list}">
-                  <c:choose>
-                    <c:when test="${status.count%2==1}">
-                      <span class="label label-info">
-                        <a href="/Blog/TagsServlet?get=${t.tag}">
-                          &nbsp;${t.tag}&nbsp;
-                        </a>
-                      </span>
-                    </c:when>
-                    <c:otherwise>
-                      <span class="label label-success"
-                        ><a href="/Blog/TagsServlet?get=${t.tag}">
-                          &nbsp;${t.tag}&nbsp;</a
-                        ></span
-                      >
-                    </c:otherwise>
-                  </c:choose>
-                </c:forEach>
-              </div>
-            </div> -->
-
-					<c:if test="${sessionScope.user!=null}">
-						<a href="/Blog/AddServlet"> <span>写新文章</span>
-						</a>
-						<a href="/Blog/AdminServlet"> <span>管理更多</span>
-						</a>
-					</c:if>
-				</div>
-
-				<!-- <div class="col-md-7 " id="right_Content">
-            <div class="list-group">
-              <a href="#" class="list-group-item active">文章</a>
-              <c:forEach var="article" items="${article_list}">
-                <div class="list-group-item">
-                  <h4>
-                    <a href="/Blog/ArticleServlet?id=${article.id}"
-                      >${article.title}</a
-                    >
-                  </h4>
-                  <br /> <span>${article.time}&nbsp;&nbsp;|</span>
-                  <a href="/Blog/SortServlet?get=${article.sort}"
-                    >${article.sort}</a
-                  >
-                  &nbsp;&nbsp;| <span>阅读次数: ${article.visit}</span> <br />
-                  <br /> <span>${article.content}</span> <br /> <br /> <br />
-                  <a href="/Blog/ArticleServlet?id=${article.id}">阅读全文</a>
-                  <br />
-                </div>
-              </c:forEach>
             </div>
-          </div> -->
-			</div>
-		</div>
 
-		<!-- <a href="#">
-        <input class="btn btn-default" value="返回顶部" style="width: 20%;" />
-      </a> -->
+
+			<c:if test="${sessionScope.user != null}">
+				<a href="/Blog/AddServlet"> <span>写新文章</span>
+				</a>
+				<a href="/Blog/AdminServlet"> <span>管理更多</span>
+				</a>
+			</c:if>
+		</div>
 	</div>
 </body>
 </html>

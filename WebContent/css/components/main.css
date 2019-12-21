@@ -43,6 +43,10 @@
 	float: left;
 }
 
+.content-wrap--full {
+	width: 100%;
+}
+
 .content-wrap-post {
 	width: calc(100% - 400px);
 }

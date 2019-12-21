@@ -78,8 +78,6 @@ public class UserDaoImpl implements UserDao {
 				map.put("user_password", rs.getString("user_name"));
 				map.put("user_id", rs.getString("user_id"));
 
-				System.out.println(map);
-
 				try {
 					BeanUtils.populate(user, map);
 				} catch (Exception e) {

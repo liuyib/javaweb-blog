@@ -32,7 +32,7 @@
 		<div class="main__inner">
 			<%@ include file="./components/sideutils.jsp"%>
 
-			<div class="content-wrap content-wrap-post">
+			<div class="content-wrap content-wrap-post ${sessionScope.user != null ? "" : "content-wrap--full"}">
 				<div class="content">
 					<%@ include file="./components/post-header.jsp"%>
 
@@ -54,7 +54,9 @@
 				<%@ include file="./components/comment.jsp"%>
 			</div>
 
-			<%@ include file="./components/sidebar.jsp"%>
+			<c:if test="${sessionScope.user != null}">
+				<%@ include file="./components/sidebar.jsp"%>
+			</c:if>
 
 			<div class="clearfix"></div>
 		</div>
