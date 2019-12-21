@@ -9,26 +9,27 @@ import blog.model.User;
 
 public class LoginUtils {
 
-	public static void login(HttpServletRequest request) {
+	public static boolean login(HttpServletRequest request) {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 
 		if (StringUtils.isEmpty(username) || StringUtils.isEmpty(password)) {
-			return;
+			return false;
 		}
 
 		UserDao dao = UserDaoImpl.getInstance();
 		User user = dao.login(username, password);
 
 		if (user == null) {
-			return;
+			return false;
 		}
 
 		// 写入session
 		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 
+		return true;
 	}
 
 }

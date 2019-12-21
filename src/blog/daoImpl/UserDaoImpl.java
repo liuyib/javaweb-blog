@@ -1,6 +1,5 @@
 package blog.daoImpl;
 
-import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,7 +9,6 @@ import java.util.Map;
 
 import org.apache.commons.beanutils.BeanUtils;
 
-import blog.dao.TagDao;
 import blog.dao.UserDao;
 import blog.db.C3P0Connection;
 import blog.model.User;
@@ -79,6 +77,8 @@ public class UserDaoImpl implements UserDao {
 				map.put("user_name", rs.getString("user_name"));
 				map.put("user_password", rs.getString("user_name"));
 				map.put("user_id", rs.getString("user_id"));
+
+				System.out.println(map);
 
 				try {
 					BeanUtils.populate(user, map);
