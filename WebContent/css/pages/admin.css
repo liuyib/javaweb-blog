@@ -1,2 +1,74 @@
 @charset "UTF-8";
 @import "../common.css";
+
+body {
+	background-color: #fff;
+}
+
+.container {
+	padding-top: 2rem;
+}
+
+.container__inner {
+	width: 768px;
+	margin: 0 auto;
+}
+
+.tab-list {
+	position: relative;
+	border-bottom: 2px solid #e4e7ed;
+}
+
+.tab-list .tab-itom {
+	float: left;
+	list-style: none;
+	margin-right: 4px;
+}
+
+.tab-itom .test-label {
+	position: relative;
+	display: block;
+	top: 2px;
+	height: 2.3rem;
+	line-height: 2rem;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #e4e7ed;
+	padding: 5px 10px 8px 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: border .2s;
+}
+
+.tab-itom .test-label:not(:last-child) {
+	margin-right: 1rem;
+}
+
+.tab-itom .test-label:hover {
+	color: #409eff;
+}
+
+.tab-itom .tab-box {
+	position: absolute;
+	left: 0;
+	top: calc(2.3rem + 2px);
+	width: 100%;
+	height: 248px;
+	z-index: 0;
+}
+
+input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+input[type="radio"]:checked + .test-label {
+	border-bottom-color: #409eff;
+	background-color: #fff;
+	color: #409eff;
+	z-index: 10;
+}
+
+input[type="radio"]:checked ~ .tab-box {
+	z-index: 5;
+}
