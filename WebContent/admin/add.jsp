@@ -7,11 +7,8 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>新的文章 | MyBlog</title>
-	<link rel="stylesheet"
-				href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./editormd/css/editormd.min.css" />
-
 	<link rel="stylesheet" href="./css/pages/add.css" />
 </head>
 

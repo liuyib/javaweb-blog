@@ -5,6 +5,25 @@ body {
 	background-color: #fff;
 }
 
+.btn-sm {
+	padding: 0 5px;
+	font-size: 15px;
+}
+
+.btn-sm a:hover {
+	color: inherit;
+}
+
+.btn-sm:not(:last-child) {
+	margin-right: .5rem;
+}
+
+.clearinput {
+	border: 0;
+	background-color: transparent;
+	font-size: 15px;
+}
+
 .container {
 	padding-top: 2rem;
 }
@@ -12,6 +31,10 @@ body {
 .container__inner {
 	width: 768px;
 	margin: 0 auto;
+}
+
+.header {
+	margin-bottom: 1rem;
 }
 
 .tab-list {
@@ -71,4 +94,35 @@ input[type="radio"]:checked + .test-label {
 
 input[type="radio"]:checked ~ .tab-box {
 	z-index: 5;
+	background-color: #fff;
 }
+
+.tab-box {
+	margin-top: .5rem;
+}
+
+.tab-box-item {
+	display: flex;
+	height: 40px;
+	line-height: 40px;
+	width: 100%;
+}
+
+.tab-box-item__left {
+	flex: 1 0 auto;
+}
+
+.tab-box-item__right {
+	flex: 0 0 auto;
+}
+
+.post__title {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.post__date {
+	float: right;
+	margin-right: 1rem;
+}
+
