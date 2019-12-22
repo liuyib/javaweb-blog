@@ -5,8 +5,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.Test;
-
 public class DateUtils {
 
 	/**
@@ -17,7 +15,7 @@ public class DateUtils {
 	 */
 	public static String getFormatDate(Date date) {
 
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		return format.format(date);
 	}
 
@@ -29,7 +27,7 @@ public class DateUtils {
 	 * @throws ParseException
 	 */
 	public static Date getDate(String date) throws ParseException {
-		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd");
 		return format.parse(date);
 	}
 }
