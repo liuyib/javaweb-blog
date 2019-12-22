@@ -40,7 +40,21 @@
 
 					<div class="header-user">
 						<c:if test="${sessionScope.user != null}">
-							<a class="cleara" href="/Blog/AdminServlet">管理更多</a>
+							<details class="dropdown">
+								<summary class="dropdown-summary">
+									<img src="/Blog/img/avatar-default.svg" />
+								</summary>
+								<div class="dropdown-menu">
+									<a class="dropdown-item cleara" href="/Blog/AdminServlet">
+										<i class="fa fa-user-o"></i>
+										管理更多
+									</a>
+									<div class="dropdown-item">
+										<i class="fa fa-sign-out"></i>
+										退出登录
+									</div>
+								</div>
+							</details>
 						</c:if>
 						<c:if test="${sessionScope.user == null}">
 							<a class="cleara" href="/Blog/index.jsp">登录/注册</a>
@@ -51,6 +65,7 @@
 						<div class="header-writting">
 							<i class="fa fa-paint-brush"></i>
 							<a class="cleara" href="/Blog/AddServlet">写博客</a>
+							
 						</div>
 					</c:if>
 				</div>

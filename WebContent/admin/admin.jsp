@@ -7,7 +7,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>管理 | MyBlog</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/Blog/css/vendor/bootstrap.min.css">
 	<link type="text/css" rel="stylesheet" href="/Blog/css/pages/admin.css" />
 </head>
 

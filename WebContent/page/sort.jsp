@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<div id="container" class="container">
+	<div id="container" class="my-container">
 		<%@ include file="./components/header.jsp"%>
 
 		<main id="main" class="main">

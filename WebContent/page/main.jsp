@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/Blog/css/pages/home.css" type="text/css" />
 </head>
 <body>
-	<div id="container" class="container">
+	<div id="container" class="my-container">
 		<%@ include file="./components/header.jsp"%>
 
 		<main id="main" class="main">

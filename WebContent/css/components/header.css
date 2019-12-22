@@ -155,3 +155,41 @@
   text-align: center;
   color: #fff;
 }
+
+.dropdown {
+	position: relative;
+	min-width: 100px;
+	text-align: left;
+}
+
+.dropdown-summary {
+	outline: none;
+	border: none;
+}
+
+.dropdown-summary img {
+	vertical-align: middle;
+	margin-bottom: 5px;
+	border-radius: 50%;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: -10px;
+	right: -10px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 3px;
+	padding: 0 .5rem;
+}
+
+.dropdown-item {
+	font-size: 16px;
+	color: #666;
+	transition: color .2s;
+}
+
+.dropdown-item:hover {
+	color: #11a3eb
+}
