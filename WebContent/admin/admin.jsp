@@ -79,7 +79,8 @@
 		</div>
 	</div>
 
-	<script src="../js/admin.js"></script>
+	<script src="/Blog/js/jquery.min.js"></script>
+	<script src="/Blog/js/admin.js"></script>
 </body>
 
 </html>
