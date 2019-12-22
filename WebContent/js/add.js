@@ -1,21 +1,41 @@
-function sort_click(btn){
- 	//获取点击按钮的内容
- 	var value = btn.value;
- 	//获取分类输入框	
- 	var sort = document.getElementById("sort");
- 	//设置分类值
- 	sort.value=value;
+document.addEventListener("DOMContentLoaded", function() {
+  var editor = editormd("editormd", {
+    width: "100%",
+    height: 720,
+    path: "./editormd/lib/",
+    codeFold: true,
+    searchReplace: true,
+    saveHTMLToTextarea: true, // 保存 HTML 到 Textarea
+    htmlDecode: "style,script,iframe|on*", // 开启 HTML 标签解析，为了安全性，默认不开启
+    emoji: true,
+    taskList: true,
+    tocm: true,
+    tex: true,
+    flowChart: true,
+    sequenceDiagram: true,
+    imageUpload: true,
+    imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+    imageUploadURL: "/Blog/UploadPic",
+    //后台只需要返回一个 JSON 数据
+    onload: function() {
+      //console.log("onload =>", this, this.id, this.settings);
+    }
+  });
+});
 
- }
- function tags_click(btn){	
-	//获取点击按钮的内容
-	var value = btn.value;
-	//获取标签输入框	
-	var tags = document.getElementById("tags");
-	//获取标签已有的值	
-	var tags_value = tags.value;
-	//判断是否已经包含
-	if(tags_value.indexOf(value) > -1)return ;
-	//新增新的值
-	tags.value = tags_value+" "+value;
- }
+function sort_click(btn) {
+  var value = btn.value;
+  var sort = document.getElementById("sort");
+
+  sort.value = value;
+}
+
+function tags_click(btn) {
+  var value = btn.value;
+  var tags = document.getElementById("tags");
+  var tags_value = tags.value;
+
+  if (tags_value.indexOf(value) > -1) return;
+
+  tags.value = tags_value + " " + value;
+}

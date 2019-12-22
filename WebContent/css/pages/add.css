@@ -1,0 +1,32 @@
+@charset "UTF-8";
+@import "../common.css";
+
+body {
+	background-color: #fff;
+}
+
+.form-item {
+	margin-bottom: 1rem;
+}
+
+.form-item__label {
+	font-size: 16px;
+}
+
+.form-item-btns {
+	margin-left: .5rem;
+}
+
+.form-item-btns__item {
+	margin-bottom: 4px;
+	padding: 0 5px;
+	font-size: 14px;
+}
+
+.form-item-btns__item:not(:last-child) {
+	margin-right: .5rem;
+}
+
+.form-submit {
+	text-align: right;
+}
