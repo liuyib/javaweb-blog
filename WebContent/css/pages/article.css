@@ -1,6 +1,38 @@
 @charset "UTF-8";
 @import "../common.css";
 
+.post-content h1, h2 {
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.post-content h1 {
+	font-size: 28px;
+}
+
+.post-content h2 {
+	font-size: 24px;
+}
+
+.post-content h3 {
+	font-size: 22px;
+}
+
+.post-content h4 {
+	font-size: 20px;
+}
+
+.post-content h5 {
+	font-size: 18px;
+}
+
+.post-content h6 {
+	font-size: 16px;
+}
+
+.post-content h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
 .post-header {
 	margin-bottom: 1.5rem
 }

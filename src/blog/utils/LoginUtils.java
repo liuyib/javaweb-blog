@@ -1,5 +1,7 @@
 package blog.utils;
 
+import java.util.Enumeration;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,6 +12,21 @@ import blog.model.User;
 public class LoginUtils {
 
 	public static boolean login(HttpServletRequest request) {
+		HttpSession session = request.getSession();
+		// 获取session中所有的键值
+		Enumeration<String> attrs = session.getAttributeNames();
+
+		while (attrs.hasMoreElements()) {
+			// 获取session键值
+			String name = attrs.nextElement().toString();
+			// 根据键值取session中的值
+			Object value = session.getAttribute(name);
+
+			// 已经登录
+			if (name == "user" && value != null) {
+				return true;
+			}
+		}
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
@@ -26,7 +43,6 @@ public class LoginUtils {
 		}
 
 		// 写入session
-		HttpSession session = request.getSession();
 		session.setAttribute("user", user);
 
 		return true;

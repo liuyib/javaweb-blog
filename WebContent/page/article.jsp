@@ -11,9 +11,8 @@
 <link rel="stylesheet" href="/Blog/css/pages/article.css" type="text/css" />
 <script src="./js/article.js"></script>
 
-<script src="./editormd/js/zepto.min.js"></script>
-<script src="./editormd/js/editormd.js"></script>
-<script src="./editormd/js/jquery.min.js"></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./editormd/editormd.min.js"></script>
 <script src="./editormd/lib/marked.min.js"></script>
 <script src="./editormd/lib/prettify.min.js"></script>
 <script src="./editormd/lib/raphael.min.js"></script>
@@ -21,7 +20,6 @@
 <script src="./editormd/lib/sequence-diagram.min.js"></script>
 <script src="./editormd/lib/flowchart.min.js"></script>
 <script src="./editormd/lib/jquery.flowchart.min.js"></script>
-<script src="./editormd/editormd.js"></script>
 </head>
 
 <body>
@@ -37,7 +35,7 @@
 					<%@ include file="./components/post-header.jsp"%>
 
 					<div id="postContent" class="post-content">
-						<textarea id="article_content">${article.content}</textarea>
+						<textarea>${article.content}</textarea>
 					</div>
 
 					<div class="post-tag">
@@ -64,7 +62,7 @@
 
 		<%@ include file="./components/footer.jsp"%>
 	</div>
-	
+
 	<script type="text/javascript">
 		$(function mdToHtml() {
 			editormd.markdownToHTML("postContent", {
