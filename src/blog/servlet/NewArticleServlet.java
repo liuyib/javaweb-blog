@@ -1,6 +1,7 @@
 package blog.servlet;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,7 +24,7 @@ public class NewArticleServlet extends HttpServlet {
 		Article result = as.addArticle(request);
 		request.setAttribute("article", result);
 
-		request.getRequestDispatcher("/admin/result.jsp").forward(request, response);
+		request.getRequestDispatcher("/LoginServlet").forward(request, response);
 
 	}
 
