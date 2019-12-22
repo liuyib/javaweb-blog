@@ -5,6 +5,12 @@ body {
 	background-color: #fff;
 }
 
+.edit-post-a {
+	display: inline-block;
+	text-decoration: none;
+	margin-right: .5rem;
+}
+
 .btn-sm {
 	padding: 0 5px;
 	font-size: 15px;

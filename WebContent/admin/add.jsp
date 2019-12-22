@@ -13,7 +13,6 @@
 </head>
 
 <body>
-	<div class="head_line"></div>
 	<div class="container" id="main">
 		<form action="/Blog/NewArticleServlet" method="post">
 			<div class="form-item">

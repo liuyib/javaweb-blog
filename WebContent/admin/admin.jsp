@@ -32,9 +32,9 @@
 									<span class="post__date">${a.time}</span>
 								</div>
 								<div class="tab-box-item__right">
-									<button class="btn btn-outline-primary btn-sm">
-										<a href="/Blog/AdminDataServlet?op=edit_article&&article_id=${a.id}">edit</a>
-									</button>
+									<a class="edit-post-a" href="/Blog/AdminDataServlet?op=edit_article&&article_id=${a.id}">
+										<button class="btn btn-outline-primary btn-sm">edit</button>
+									</a>
 									<button class="btn btn-outline-danger btn-sm" onclick="delete_article(this,'${a.id}')">delete</button>
 								</div>
 							</div>
