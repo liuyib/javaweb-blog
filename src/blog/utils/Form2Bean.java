@@ -1,6 +1,5 @@
 package blog.utils;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -52,7 +51,6 @@ public class Form2Bean {
 		value.put("time", request.getParameter("time"));
 		value.put("author", request.getParameter("author"));
 		value.put("sort", request.getParameter("sort"));
-		// String tags = request.getParameter("tags");
 		value.put("content", request.getParameter("content"));
 		value.put("star", 0);
 		value.put("comment", 0);
@@ -64,7 +62,6 @@ public class Form2Bean {
 			BeanUtils.populate(bean, value);
 		} catch (Exception e) {
 			e.printStackTrace();
-
 		}
 		if (vilidate(bean)) {
 			return bean;

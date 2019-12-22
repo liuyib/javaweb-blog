@@ -66,14 +66,6 @@
                 </c:forEach>
               </div>
             </div>
-
-
-			<c:if test="${sessionScope.user != null}">
-				<a href="/Blog/AddServlet"> <span>写新文章</span>
-				</a>
-				<a href="/Blog/AdminServlet"> <span>管理更多</span>
-				</a>
-			</c:if>
 		</div>
 	</div>
 </body>

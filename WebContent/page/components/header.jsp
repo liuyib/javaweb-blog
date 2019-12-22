@@ -40,17 +40,19 @@
 
 					<div class="header-user">
 						<c:if test="${sessionScope.user != null}">
-							已登录
+							<a class="cleara" href="/Blog/AdminServlet">管理更多</a>
 						</c:if>
 						<c:if test="${sessionScope.user == null}">
 							<a class="cleara" href="/Blog/index.jsp">登录/注册</a>
 						</c:if>
 					</div>
 
-					<div class="header-writting">
-						<i class="fa fa-paint-brush"></i>
-						<a class="cleara" href="/Blog/NewArticleServlet">写博客</a>
-					</div>
+					<c:if test="${sessionScope.user != null}">
+						<div class="header-writting">
+							<i class="fa fa-paint-brush"></i>
+							<a class="cleara" href="/Blog/AddServlet">写博客</a>
+						</div>
+					</c:if>
 				</div>
 			</nav>
 
