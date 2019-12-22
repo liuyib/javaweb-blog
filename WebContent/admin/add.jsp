@@ -13,6 +13,10 @@
 </head>
 
 <body>
+	<button class="btn-back btn btn-outline-primary btn-sm">
+		<a class="btn-back__link cleara" href="/Blog/index.jsp">返回</a>
+	</button>
+
 	<div class="container" id="main">
 		<form action="/Blog/NewArticleServlet" method="post">
 			<div class="form-item">

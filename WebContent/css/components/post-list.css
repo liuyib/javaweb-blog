@@ -8,6 +8,7 @@
 }
 
 .post-archives {
+	z-index: 10;
 	position: absolute;
 	left: -16px;
 	top: 4rem;

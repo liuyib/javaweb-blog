@@ -5,19 +5,27 @@ body {
 	background-color: #fff;
 }
 
-.edit-post-a {
-	display: inline-block;
-	text-decoration: none;
-	margin-right: .5rem;
-}
-
 .btn-sm {
 	padding: 0 5px;
 	font-size: 15px;
 }
 
-.btn-sm a:hover {
-	color: inherit;
+.btn-back {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	padding: 0;
+}
+
+.btn-back__link {
+	padding: 0 5px;
+	font-size: 18px;
+}
+
+.edit-post-a {
+	display: inline-block;
+	text-decoration: none;
+	margin-right: .5rem;
 }
 
 .btn-sm:not(:last-child) {

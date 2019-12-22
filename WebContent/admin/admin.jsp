@@ -12,14 +12,12 @@
 </head>
 
 <body>
+	<button class="btn-back btn btn-outline-primary btn-sm">
+		<a class="btn-back__link cleara" href="/Blog/index.jsp">返回</a>
+	</button>
+
 	<div id="container" class="container">
 		<div class="container__inner">
-			<div class="header">
-				<button class="btn btn-outline-primary btn-sm">
-					<a href="/Blog/index.jsp">返回</a>
-				</button>
-			</div>
-		
 			<ul class="tab-list clearfix">
 				<li class="tab-itom">
 					<input type="radio" id="testTabRadio1" class="test-radio" name="tab" checked="checked">
