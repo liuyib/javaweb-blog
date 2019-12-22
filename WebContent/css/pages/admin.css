@@ -20,8 +20,14 @@ body {
 
 .clearinput {
 	border: 0;
+	margin-right: .25rem;
+	width: 100%;
 	background-color: transparent;
 	font-size: 15px;
+}
+
+.input__wrapper {
+	margin-right: .5rem;
 }
 
 .container {

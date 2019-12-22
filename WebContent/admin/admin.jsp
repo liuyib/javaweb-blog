@@ -33,9 +33,9 @@
 								</div>
 								<div class="tab-box-item__right">
 									<button class="btn btn-outline-primary btn-sm">
-										<a href="/Blog/AdminDataServlet?op=edit_article&&article_id=${a.id}">编辑</a>
+										<a href="/Blog/AdminDataServlet?op=edit_article&&article_id=${a.id}">edit</a>
 									</button>
-									<button class="btn btn-outline-danger btn-sm" onclick="delete_article(this,'${a.id}')">删除</button>
+									<button class="btn btn-outline-danger btn-sm" onclick="delete_article(this,'${a.id}')">delete</button>
 								</div>
 							</div>
 						</c:forEach>
@@ -47,12 +47,12 @@
 					<div class="tab-box">
 						<c:forEach var="s" items="${sort}">
 							<div class="tab-box-item clearfix">
-								<div class="tab-box-item__left">
+								<div class="tab-box-item__left input__wrapper">
 									<input class="clearinput" type="text" value="${s}" disabled="disabled">
 								</div>
 								<div class="tab-box-item__right">
-									<button class="btn btn-outline-primary btn-sm" onclick="edit_sort(this,'${s}')">编辑</button>
-									<button class="btn btn-outline-danger btn-sm" onclick="delet_sort(this,'${s}')">删除</button>
+									<button class="btn btn-outline-primary btn-sm" onclick="edit_sort(this,'${s}')">edit</button>
+									<button class="btn btn-outline-danger btn-sm" onclick="delet_sort(this,'${s}')">delete</button>
 								</div>
 							</div>
 						</c:forEach>
@@ -64,12 +64,12 @@
 					<div class="tab-box">
 						<c:forEach var="t" items="${tags}">
 							<div class="tab-box-item clearfix">
-								<div class="tab-box-item__left">
+								<div class="tab-box-item__left input__wrapper">
 									<input class="clearinput" type="text" value="${t.tag}" disabled="disabled">
 								</div>
 								<div class="tab-box-item__right">
-									<button class="btn btn-outline-primary btn-sm" onclick="edit_tag(this,'${t.tag}')">编辑</button>
-									<button class="btn btn-outline-danger btn-sm" onclick="delet_tag(this,'${t.tag}')">删除</button>
+									<button class="btn btn-outline-primary btn-sm" onclick="edit_tag(this,'${t.tag}')">edit</button>
+									<button class="btn btn-outline-danger btn-sm" onclick="delet_tag(this,'${t.tag}')">delete</button>
 								</div>
 							</div>
 						</c:forEach>
