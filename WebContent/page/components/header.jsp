@@ -49,10 +49,10 @@
 										<i class="fa fa-user-o"></i>
 										管理更多
 									</a>
-									<div class="dropdown-item">
+									<a class="dropdown-item" href="/Blog/LogoutServlet">
 										<i class="fa fa-sign-out"></i>
 										退出登录
-									</div>
+									</a>
 								</div>
 							</details>
 						</c:if>
