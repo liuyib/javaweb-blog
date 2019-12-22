@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div class="sideutils">
-		<div class="sideutils-btn sideutils-btn__adjust" badge="${article.star}" onclick="love_article(${article.id})">
+		<div class="sideutils-btn sideutils-btn__adjust" badge="${article.star}" onclick="love_article(this, ${article.id})">
 			<i class="fa fa-thumbs-up"></i>
 		</div>
 		<div class="sideutils-btn sideutils-btn__comment" badge="${article.comment}">

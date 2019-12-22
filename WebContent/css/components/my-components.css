@@ -1,0 +1,54 @@
+.stun-message {
+  position: fixed;
+  top: 3rem;
+  left: 50%;
+  z-index: 1010;
+  transform: translateX(-50%);
+}
+
+.stun-alert {
+  position: relative;
+  border-radius: 3px;
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1rem;
+  color: #fff;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stun-alert-success {
+  color: #52c41a;
+}
+
+.stun-alert-success ~ i {
+  color: #52c41a;
+}
+
+.stun-alert-info {
+  color: #1890ff;
+}
+
+.stun-alert-info ~ i {
+  color: #1890ff;
+}
+
+.stun-alert-warning {
+  color: #faad14;
+}
+
+.stun-alert-warning ~ i {
+  color: #faad14;
+}
+
+.stun-alert-error {
+  color: #f5222d;
+}
+
+.stun-alert-error ~ i {
+  color: #f5222d;
+}
+
+.stun-alert-description {
+  margin-left: 0.5rem;
+}
