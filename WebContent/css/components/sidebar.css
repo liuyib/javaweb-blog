@@ -1,6 +1,6 @@
 .sidebar {
-  width: 280px;
   float: right;
+  width: 280px;
 }
 
 @media (max-width: 991.98px) {
@@ -13,6 +13,8 @@
   border-radius: 5px;
   padding: 1rem;
   width: 280px;
+  max-height: 600px;
+  overflow: auto;
   font-size: 16px;
   background-color: #fff;
 }
@@ -40,6 +42,33 @@
 .sidebar-author__motto {
   margin: 0.5rem 0 0;
   font-weight: 600;
+}
+
+.sidebar-toplist {
+	margin: .5rem 0;
+}
+
+.sidebar-toplist__title {
+	font-size: 14px;
+	font-weight: 700;
+	text-align: center;
+	cursor: pointer;
+}
+
+.sidebar-toplist-item {
+	display: block;
+	width: 100%;
+}
+
+.sidebar-toplist-item__title {
+	font-size: 14px;
+	color: #ab3300;
+}
+
+.sidebar-toplist-item__visit {
+	float: right;
+	font-size: 14px;
+	color: #ff3f1a;
 }
 
 .sidebar-social,

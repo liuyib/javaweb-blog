@@ -51,22 +51,6 @@
 		</main>
 
 		<%@ include file="./components/footer.jsp"%>
-
-		<div>
-            <div class="visit">
-              <div class="list-group">
-                <span class="list-group-item active">阅读排行</span>
-                <c:forEach var="a" items="${visit_rank}">
-                  <a
-                    href="/Blog/ArticleServlet?id=${a.id}"
-                    class="list-group-item"
-                    >${a.title}&nbsp;&nbsp;
-                    <span>(${a.visit})</span>
-                  </a>
-                </c:forEach>
-              </div>
-            </div>
-		</div>
 	</div>
 </body>
 </html>

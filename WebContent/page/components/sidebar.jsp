@@ -14,6 +14,22 @@
 				</div>
 				<div class="sidebar-author__motto">write code and love life</div>
 			</div>
+			
+			<div class="sidebar-toplist">
+				<details>
+					<summary class="sidebar-toplist__title">看爆 TOP10</summary>
+					
+					<div class="sidebar-toplist__content">
+						<c:forEach var="a" items="${visit_rank}">
+		                  <a class="sidebar-toplist-item clearfix" href="/Blog/ArticleServlet?id=${a.id}">
+		                  	<span class="sidebar-toplist-item__title">${a.title}</span>
+		                  	<span class="sidebar-toplist-item__visit">${a.visit} 次看爆</span>
+		                  </a>
+		                </c:forEach>
+					</div>
+				</details>
+			</div>
+			
 			<div class="sidebar-social">
 				<a class="sidebar-social__item" href="https://github.com/liuyib/"
 					target="_blank" rel="noopener" data-popover="Github"
