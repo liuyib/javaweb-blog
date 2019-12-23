@@ -12,6 +12,10 @@ pageEncoding="UTF-8"%>
 		<div class="container__inner">
 			<div class="header">
 				<div class="header__title">注册</div>
+
+				<c:if test="${fail != null}">
+					<font style="color: red">${fail}</font>
+				</c:if>
 			</div>
 			<div class="main">
        			<form class="form" action="/Blog/RegisterServlet" method="post">
@@ -23,7 +27,7 @@ pageEncoding="UTF-8"%>
 							<input class="el-input__inner" type="text" placeholder="请输入用户名" name="username" required />
 						</div>
 					</div>
-					
+
 					<div class="form-item">
 						<div class="el-input el-input--prefix">
 							<div class="el-input__prefix">
@@ -38,7 +42,7 @@ pageEncoding="UTF-8"%>
 							<div class="el-input__prefix">
 								<i class="el-input__icon fa fa-lock"></i>
 							</div>
-							<input class="el-input__inner" type="password" placeholder="请再次输入密码" name="password" required />
+							<input class="el-input__inner" type="password" placeholder="请再次输入密码" name="repassword" required />
 						</div>
 					</div>
 
