@@ -13,6 +13,10 @@
 </head>
 
 <body>
+	<button class="btn-back btn btn-outline-primary btn-sm">
+		<a class="btn-back__link cleara" href="/Blog/index.jsp">返回</a>
+	</button>
+
 	<div class="container" id="main">
 		<form action="/Blog/UpdateServlet" method="post">
 			<input type="hidden" name="id" value="${edit_article.id}">
