@@ -13,11 +13,6 @@
 				发表于 ${article.time.substring(0, 10)}
 			</span>
 			<span style="margin: 0 5px;">•</span>
-			<span class="post-header-meta__item sort">
-				<i class="fa fa-folder-open"></i>
-				<a href="/Blog/SortServlet?get=${article.sort}">${article.sort}</a>
-			</span>
-			<span style="margin: 0 5px;">•</span>
 			<span class="post-header-meta__item author">
 				<i class="fa fa-user"></i>
 				${article.author}

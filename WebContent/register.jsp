@@ -11,7 +11,7 @@ pageEncoding="UTF-8"%>
   	<div id="container" class="container">
 		<div class="container__inner">
 			<div class="header">
-				<div class="header__title">Ant Blog</div>
+				<div class="header__title">注册</div>
 			</div>
 			<div class="main">
        			<form class="form" action="/Blog/RegisterServlet" method="post">
