@@ -11,7 +11,7 @@
 				<div class="header-nav__inner">
 					<div class="header-menu">
 						<div class="header-menu-item">
-							<a class="header-menu-item__link" href="/Blog/index.jsp"> <i
+							<a class="header-menu-item__link" href="/Blog/ShowDataServlet"> <i
 								class="fa fa-home"></i> <span>首页</span>
 							</a>
 						</div>
