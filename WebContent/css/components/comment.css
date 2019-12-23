@@ -109,6 +109,7 @@
 }
 
 .comment-content-option {
+	position: relative;
 	text-align: right;
 }
 
@@ -129,4 +130,20 @@
 
 .comment-diss {
 	color: #8590a6;
+}
+
+.comment-del {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #ca0c16;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.comment-item:hover .comment-del {
+	opacity: 1;
+	visibility: visible;
 }
