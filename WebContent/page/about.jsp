@@ -17,7 +17,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--center"}">
 				<div class="content">
 					关于我们
 				</div>

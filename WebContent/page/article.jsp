@@ -29,8 +29,7 @@
 			<div class="main__inner">
 				<%@ include file="./components/sideutils.jsp"%>
 
-				<div class="content-wrap content-wrap-post ${sessionScope.user != null ? "" : "
-						 content-wrap--full"}">
+				<div class="content-wrap content-wrap-post ${sessionScope.user != null ? "" : "content-wrap--center"}">
 					<div class="content">
 						<%@ include file="./components/post-header.jsp"%>
 

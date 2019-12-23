@@ -48,6 +48,11 @@
 	width: 100%;
 }
 
+.content-wrap--center {
+	margin: 0 auto;
+	float: none;
+}
+
 .content-wrap-post {
 	width: calc(100% - 400px);
 }
