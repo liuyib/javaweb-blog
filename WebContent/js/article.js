@@ -14,79 +14,51 @@ function love_article(ctx, article_id) {
 	});
 }
 
-function deletecm(component, comm_id) {
-	var container = component.parentNode.parentNode;
-	var url = "/Blog/CMDeleServlet?id=" + comm_id;
-	// 获取ajax
-	var xmlhttp = getXHR();
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			// 处理服务器收到的请求响应
-			var res = xmlhttp.responseText;
-			// 解析json对象
-			var res = eval('(' + res + ')');
-			// alert( res.msg );
-			if (res.msg == "success") {
-				// 删除评论的视图
-				var p = container.parentNode;
-				p.removeChild(container);
+function star(ctx, comm_id) {
+	$.ajax({
+		url : "/Blog/CMStarServlet?id=" + comm_id,
+		type : "POST",
+		dataType : "JSON",
+		success : function(res) {
+			if (res && res.msg === 'success') {
+				var oldVal = parseInt($(ctx).children('span').text());
+				$(ctx).children('span').text(oldVal + 1);
+			} else {
+				popAlert('error', '支持失败', 5);
 			}
 		}
-	}
-	xmlhttp.open("POST", url, true);
-	xmlhttp.send();
+	});
 }
 
-/**
- * 点击了star
- */
-function star(component, comm_id) {
-
-	var url = "/Blog/CMStarServlet?id=" + comm_id;
-	// 获取ajax
-	var xmlhttp = getXHR();
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			// 处理服务器收到的请求响应
-			var res = xmlhttp.responseText;
-			// 解析json对象
-			var res = eval('(' + res + ')');
-			if (res.msg == "success") {
-				// 返回 ”success“
-				component.innerHTML = res.new_star;
+function diss(ctx, comm_id) {
+	$.ajax({
+		url : "/Blog/CMDissServlet?id=" + comm_id,
+		type : "POST",
+		dataType : "JSON",
+		success : function(res) {
+			if (res && res.msg === 'success') {
+				var oldVal = parseInt($(ctx).children('span').text());
+				$(ctx).children('span').text(oldVal + 1);
 			} else {
-				alert("不要狂点呀...");
+				popAlert('error', '反对失败', 5);
 			}
 		}
-	}
-	xmlhttp.open("POST", url, true);
-	xmlhttp.send();
+	});
 }
 
-/**
- * 点击了diss
- */
-function diss(component, comm_id) {
-
-	var url = "/Blog/CMDissServlet?id=" + comm_id;
-	// 获取ajax
-	var xmlhttp = getXHR();
-	xmlhttp.onreadystatechange = function() {
-		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-			// 处理服务器收到的请求响应
-			var res = xmlhttp.responseText;
-			// 解析json对象
-			var res = eval('(' + res + ')');
-			if (res.msg == "success") {
-				// 返回 ”success“
-				component.innerHTML = res.new_diss;
+function deletecm(ctx, comm_id) {
+	$.ajax({
+		url : "/Blog/CMDeleServlet?id=" + comm_id,
+		type : "POST",
+		dataType : "JSON",
+		success : function(res) {
+			if (res && res.msg === 'success') {
+				$(ctx).parents('.comment-item').remove();
 			} else {
-				alert("不要狂点呀...");
+				popAlert('error', '删除失败', 5);
 			}
 		}
-	}
-	xmlhttp.open("POST", url, true);
-	xmlhttp.send();
+	});
 }
 
 /**

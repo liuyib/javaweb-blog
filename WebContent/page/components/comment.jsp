@@ -36,11 +36,11 @@
 						<div class="comment-content-option">
 							<span class="comment-adjust" onclick="star(this,${comm.id})">
 								<i class="fa fa-thumbs-up"></i>
-								${comm.star}
+								<span>${comm.star}</span>
 							</span>
 							<span class="comment-diss" onclick="diss(this,${comm.id})">
 								<i class="fa fa-thumbs-down"></i>
-								${comm.diss}
+								<span>${comm.diss}</span>
 							</span>
 						</div>
 					</div>
