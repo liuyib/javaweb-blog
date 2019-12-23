@@ -9,9 +9,7 @@
 		<div class="comment-input">
 			<form action="/Blog/NewCommentServlet?id=${article.id}" method="post">
 				<input type="hidden" name="w_nickname" value="热心网友">
-				<div class="comment-input-avatar">
-					<img src="/Blog/img/avatar-default.svg" />
-				</div>
+				<div class="comment-input-avatar"><img src="/Blog/img/avatar-default.svg" /></div>
 				<div class="comment-input-area">
 					<textarea name="w_content"></textarea>
 				</div>

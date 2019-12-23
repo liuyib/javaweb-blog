@@ -80,15 +80,21 @@
 }
 
 .comment-meta-avatar {
-	margin-right: .25rem;
+	float: left;
+	display: block;
+	margin-right: .5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	font-size: 0;
 }
 
 .comment-meta-avatar img {
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 100%;
+	height: 100%;
 }
 
 .comment-meta-name {
+	float: left;
 	font-weight: 500;
 	color: #000;
 }
