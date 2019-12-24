@@ -8,7 +8,7 @@ function love_article(ctx, article_id) {
 				var oldVal = parseInt($(ctx).attr('badge'));
 				$(ctx).attr('badge', oldVal + 1);
 			} else {
-				popAlert('error', 'ÁÇπËµûÂ§±Ë¥•', 5);
+				popAlert('error', 'µ„‘ﬁ ß∞‹', 5);
 			}
 		}
 	});
@@ -24,7 +24,7 @@ function star(ctx, comm_id) {
 				var oldVal = parseInt($(ctx).children('span').text());
 				$(ctx).children('span').text(oldVal + 1);
 			} else {
-				popAlert('error', 'ÊîØÊåÅÂ§±Ë¥•', 5);
+				popAlert('error', '÷ß≥÷ ß∞‹', 5);
 			}
 		}
 	});
@@ -40,7 +40,7 @@ function diss(ctx, comm_id) {
 				var oldVal = parseInt($(ctx).children('span').text());
 				$(ctx).children('span').text(oldVal + 1);
 			} else {
-				popAlert('error', 'ÂèçÂØπÂ§±Ë¥•', 5);
+				popAlert('error', '∑¥∂‘ ß∞‹', 5);
 			}
 		}
 	});
@@ -55,7 +55,7 @@ function deletecm(ctx, comm_id) {
 			if (res && res.msg === 'success') {
 				$(ctx).parents('.comment-item').remove();
 			} else {
-				popAlert('error', 'Âà†Èô§Â§±Ë¥•', 5);
+				popAlert('error', '…æ≥˝ ß∞‹', 5);
 			}
 		}
 	});
@@ -75,19 +75,20 @@ function popAlert(status, text, delay) {
     error: 'times-circle'
   };
 
-  if (!$('.stun-alert')[0]) {
-    var $alert = $(
-      '<div class="stun-message">' +
-        '<div class="stun-alert stun-alert-' + status + '">' +
-          '<i class="stun-alert-icon fa fa-' + icon[status] + '"></i>' +
-          '<span class="stun-alert-description">' + text + '</span>' +
-        '</div>' +
-      '</div>'
-    );
-
-    $('body').append($alert);
+  if ($('.stun-message').length) {
+	  $('.stun-message').remove();
   }
 
+  var $alert = $(
+		'<div class="stun-message">' +
+			'<div class="stun-alert stun-alert-' + status + '">' +
+				'<i class="stun-alert-icon fa fa-' + icon[status] + '"></i>' +
+				'<span class="stun-alert-description">' + text + '</span>' +
+			'</div>' +
+		'</div>'
+	);
+
+	$('body').append($alert);
   $(document).ready(function () {
     $('.stun-alert')
       .velocity('stop')

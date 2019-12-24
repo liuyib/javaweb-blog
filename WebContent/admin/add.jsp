@@ -35,7 +35,7 @@
 				<div class="col-12 col-sm">
 					<div class="form-item">
 						<span class="form-item__label">作者</span>
-						<input class="form-control form-control-sm" type="text" name="author">
+						<input class="form-control form-control-sm" type="text" name="author" readonly value="${author}">
 					</div>
 				</div>
 			</div>
