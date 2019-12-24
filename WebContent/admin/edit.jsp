@@ -19,7 +19,7 @@
 
 	<div class="container" id="main">
 		<form action="/Blog/UpdateServlet" method="post">
-			<input type="hidden" name="id" value="${edit_article.id}">
+			<input type="text" name="id" value="${edit_article.id}">
 
 			<div class="form-item">
 				<span class="form-item__label">标题</span>
@@ -31,8 +31,8 @@
 				<div class="col-12 col-sm">
 					<div class="form-item">
 						<span class="form-item__label">时间</span>
-						<input class="form-control form-control-sm" type="datetime-local" name="time"
-									 value="${edit_article.time}">
+						<input class="form-control form-control-sm" type="datetime" name="time"
+									 value="${edit_article.time.substring(0,19)}">
 					</div>
 				</div>
 

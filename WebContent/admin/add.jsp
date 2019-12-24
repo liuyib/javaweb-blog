@@ -28,7 +28,7 @@
 				<div class="col-12 col-sm">
 					<div class="form-item">
 						<span class="form-item__label">时间</span>
-						<input class="form-control form-control-sm" type="datetime-local" name="time" value="${time}">
+						<input class="form-control form-control-sm" type="datetime" name="time" value="${time.substring(0,19)}">
 					</div>
 				</div>
 				
