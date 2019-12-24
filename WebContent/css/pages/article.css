@@ -33,6 +33,26 @@
 	font-weight: 700;
 }
 
+.post-content code {
+    border-radius: 3px;
+    padding: 0 .3em;
+    font-family: 'Source Code Pro',Consolas,Menlo,Monaco,'Courier New',monospace;
+    font-size: .95em;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: #c7254e;
+    background-color: #f9f2f4;
+}
+
+.post-content pre code {
+	color: inherit;
+	background-color: transparent;
+}
+
+.post-content pre {
+	background-color: #f0f3f6 !important;
+}
+
 .post-header {
 	margin-bottom: 1.5rem
 }

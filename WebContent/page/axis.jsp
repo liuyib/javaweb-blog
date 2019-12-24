@@ -15,7 +15,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--center"}">
 				<div class="content">
 					<div class="archive">
 						<div class="archive-total">目前共 ${axis_list.size() - 1} 篇文章，继续加油！</div>

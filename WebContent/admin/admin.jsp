@@ -16,6 +16,12 @@
 		<a class="btn-back__link cleara" href="/Blog/index.jsp">返回</a>
 	</button>
 
+	<c:if test="${articles == null}">
+		<script>
+			window.location.href = "/Blog/login.jsp";
+		</script>
+	</c:if>
+
 	<div id="container" class="container">
 		<div class="container__inner">
 			<ul class="tab-list clearfix">

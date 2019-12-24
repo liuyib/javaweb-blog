@@ -24,7 +24,7 @@ public class NewArticleServlet extends HttpServlet {
 		Article result = as.addArticle(request);
 		request.setAttribute("article", result);
 
-		request.getRequestDispatcher("/LoginServlet").forward(request, response);
+		request.getRequestDispatcher("/ArticleServlet?id=" + result.getId()).forward(request, response);
 
 	}
 

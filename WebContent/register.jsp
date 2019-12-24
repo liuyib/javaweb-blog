@@ -11,7 +11,11 @@ pageEncoding="UTF-8"%>
   	<div id="container" class="container">
 		<div class="container__inner">
 			<div class="header">
-				<div class="header__title">Ant Blog</div>
+				<div class="header__title">注册</div>
+
+				<c:if test="${fail != null}">
+					<font style="color: red">${fail}</font>
+				</c:if>
 			</div>
 			<div class="main">
        			<form class="form" action="/Blog/RegisterServlet" method="post">
@@ -23,7 +27,7 @@ pageEncoding="UTF-8"%>
 							<input class="el-input__inner" type="text" placeholder="请输入用户名" name="username" required />
 						</div>
 					</div>
-					
+
 					<div class="form-item">
 						<div class="el-input el-input--prefix">
 							<div class="el-input__prefix">
@@ -38,7 +42,7 @@ pageEncoding="UTF-8"%>
 							<div class="el-input__prefix">
 								<i class="el-input__icon fa fa-lock"></i>
 							</div>
-							<input class="el-input__inner" type="password" placeholder="请再次输入密码" name="password" required />
+							<input class="el-input__inner" type="password" placeholder="请再次输入密码" name="repassword" required />
 						</div>
 					</div>
 
@@ -50,7 +54,7 @@ pageEncoding="UTF-8"%>
 				<div class="auth clearfix">
 					<span class="auth-other">
 						<span>其他登录方式：</span>
-						<a href="/Blog/page/main.jsp">游客</a>
+						<a href="/Blog/ShowDataServlet">游客</a>
 					</span>
 					<span class="auth-login">
 						<a href="/Blog/login.jsp">已有账户？登录</a>

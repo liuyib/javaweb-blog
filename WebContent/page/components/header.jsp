@@ -11,26 +11,29 @@
 				<div class="header-nav__inner">
 					<div class="header-menu">
 						<div class="header-menu-item">
-							<a class="header-menu-item__link" href="/Blog/index.jsp"> <i
+							<a class="header-menu-item__link" href="/Blog/ShowDataServlet"> <i
 								class="fa fa-home"></i> <span>首页</span>
 							</a>
 						</div>
-						<div class="header-menu-item">
-							<a class="header-menu-item__link"
-								href="/Blog/SortServlet?get=all"> <i class="fa fa-th"></i> <span>分类</span>
-							</a>
-						</div>
-						<div class="header-menu-item">
-							<a class="header-menu-item__link"
-								href="/Blog/TagsServlet?get=all"> <i class="fa fa-tags"></i>
-								<span>标签</span>
-							</a>
-						</div>
-						<div class="header-menu-item">
-							<a class="header-menu-item__link" href="/Blog/AxisServlet"> <i
-								class="fa fa-line-chart"></i> <span>时间轴</span>
-							</a>
-						</div>
+						
+						<c:if test="${sessionScope.user != null}">
+							<div class="header-menu-item">
+								<a class="header-menu-item__link"
+									href="/Blog/SortServlet?get=all"> <i class="fa fa-th"></i> <span>分类</span>
+								</a>
+							</div>
+							<div class="header-menu-item">
+								<a class="header-menu-item__link"
+									href="/Blog/TagsServlet?get=all"> <i class="fa fa-tags"></i>
+									<span>标签</span>
+								</a>
+							</div>
+							<div class="header-menu-item">
+								<a class="header-menu-item__link" href="/Blog/AxisServlet"> <i
+									class="fa fa-line-chart"></i> <span>时间轴</span>
+								</a>
+							</div>
+						</c:if>
 						<div class="header-menu-item">
 							<a class="header-menu-item__link" href="/Blog/page/about.jsp">
 								<i class="fa fa-user"></i> <span>关于</span>

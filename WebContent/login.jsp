@@ -13,7 +13,7 @@ pageEncoding="UTF-8"%>
 	<div id="container" class="container">
 		<div class="container__inner">
 			<div class="header">
-				<div class="header__title">Ant Blog</div>
+				<div class="header__title">登录</div>
 			</div>
 			<div class="main">
 				<form class="form" action="/Blog/LoginServlet" method="post">
@@ -43,7 +43,7 @@ pageEncoding="UTF-8"%>
 				<div class="auth clearfix">
 					<span class="auth-other">
 						<span>其他登录方式：</span>
-						<a href="/Blog/page/main.jsp">游客</a>
+						<a href="/Blog/ShowDataServlet">游客</a>
 					</span>
 					<span class="auth-register">
 						<a href="/Blog/register.jsp">注册账户</a>

@@ -24,7 +24,7 @@ public class UpdateServlet extends HttpServlet {
 		Article result = as.updateArticle(request);
 		request.setAttribute("article", result);
 
-		request.getRequestDispatcher("/admin/result.jsp").forward(request, response);
+		request.getRequestDispatcher("/ArticleServlet?id=" + result.getId()).forward(request, response);
 
 	}
 

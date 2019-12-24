@@ -15,7 +15,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--center"}">
 				<div class="content content-home">
 					<section class="post-list">
 						<c:forEach var="article" items="${article_list}">

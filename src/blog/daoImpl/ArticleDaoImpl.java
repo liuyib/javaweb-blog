@@ -13,7 +13,6 @@ import java.util.Map;
 import blog.dao.ArticleDao;
 import blog.db.C3P0Connection;
 import blog.model.Article;
-import blog.model.Comment;
 import blog.utils.DBUtils;
 
 /*

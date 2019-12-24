@@ -15,7 +15,7 @@
 
 		<main id="main" class="main">
 		<div class="main__inner">
-			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--full"}">
+			<div class="content-wrap ${sessionScope.user != null ? "" : "content-wrap--center"}">
 				<div class="content">
 					<div class="tagcloud">
 						<div class="tagcloud-total">标签 - ${id_tag_map.size()}</div>
