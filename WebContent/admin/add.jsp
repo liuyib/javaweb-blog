@@ -17,6 +17,12 @@
 		<a class="btn-back__link cleara" href="/Blog/index.jsp">返回</a>
 	</button>
 
+	<c:if test="${sessionScope.user == null}">
+		<script>
+			window.location.href = "/Blog/login.jsp";
+		</script>
+	</c:if>
+	
 	<div class="container" id="main">
 		<form action="/Blog/NewArticleServlet" method="post">
 			<div class="form-item">
@@ -35,7 +41,7 @@
 				<div class="col-12 col-sm">
 					<div class="form-item">
 						<span class="form-item__label">作者</span>
-						<input class="form-control form-control-sm" type="text" name="author" readonly value="${author}">
+						<input class="form-control form-control-sm" type="text" name="author" value="${author}">
 					</div>
 				</div>
 			</div>
